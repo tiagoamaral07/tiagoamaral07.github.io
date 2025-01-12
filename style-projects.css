@@ -1,0 +1,124 @@
+html {
+    scroll-behavior: smooth;
+    user-select: none;
+  }
+  
+body{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+.bg-project{
+    min-height: 100vh;
+    background-color: #0E0E0E;
+}
+
+.container-project{
+    max-height: 200px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 30px;
+    position: relative;
+}
+
+.title{
+    font-family: fira sans, Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    color: #717171;
+    font-weight: 400;
+    margin-top: 0px;
+}
+
+.soon{
+    font-family: fira sans, Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    color: #F2F7FF;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.ano{
+    font-family: fira sans, Arial, Helvetica, sans-serif;
+    font-size: 2.25em;
+    color: #F2F7FF;
+    font-weight: 600;
+    margin-top: -30px;
+}
+
+.back{
+    position: absolute;
+    left: 8%;
+    top: 33%;
+    transform: translateY(-50%);
+    transition: 0.3s ease-in-out;
+    padding: 20px 25px;
+}
+
+.back:hover{
+    transform: translate(-15px, -50%);
+}
+
+.project{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    
+}
+
+.project-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 350px;
+    min-height: 600px;
+    background-color: #2E2E2E;
+    border: 1px solid #5793ED;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.card-inside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    padding-top: 30px;
+}
+
+.card-inside img {
+    max-width: 80px;
+    height: auto;
+}
+
+.card-inside span {
+    font-family: fira sans, Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    color: #5793ED;
+    font-weight: 600;
+}
+
+.project-card:hover .card-inside{
+    opacity: 1;
+    transform: translatey(-30px);
+}
+
+.project-card:hover .card-inside img{
+    transform: translatey(-30px);
+    transition: 0.5s ease-in-out;
+}
+
+.project-card:hover{
+    background-color: #1A1A1A;
+}
