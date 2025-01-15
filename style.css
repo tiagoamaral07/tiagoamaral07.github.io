@@ -839,14 +839,7 @@ li{
         padding: 200px 0;
         gap: 10px;
     }
-}
-
-
-
-
-    
-
-    
+}  
 
 
 /* EXPERIENCE */
@@ -952,6 +945,83 @@ li{
     color: #F2F7FF;
     justify-items: center;
 }
+
+@media (max-width: 1024px){
+    .job-card h1{
+        font-size: 1.75rem;
+    }
+
+    .logo-empresa{
+        margin-bottom: 40px;
+    }
+
+    .job-card{
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 768px){
+    .exp-img{
+        display: none;
+    }
+
+    .bg-exp{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 400px){
+    .job-card{
+        max-width: 300px;
+        max-height: 250px;
+    }
+    .job-card h2{
+        font-size: 0.8rem;
+    }
+
+    .job-card h1{
+        font-size: 1.5rem;
+    }
+
+    .logo-empresa{
+        width: 50px;
+        height: 50px;
+    }
+
+    .arrow{
+        margin-top: -40px;
+    }
+}
+
+@media (max-width: 340px){
+    .job-card{
+        max-width: 300px;
+        align-items: center;
+    }
+    .job-card h2{
+        font-size: 0.6rem;
+        margin-bottom: -50px;
+    }
+
+    .job-card h1{
+        font-size: 1.2rem;
+    }
+
+    .logo-empresa{
+        width: 40px;
+        height: 40px;
+    }
+
+    .job-card p {
+        margin-top: -80px;
+    }
+}
+
+
+
 
 /* EDUCATION */
 
