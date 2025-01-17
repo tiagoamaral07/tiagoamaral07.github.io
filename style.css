@@ -273,8 +273,15 @@ li{
     transition: 0.2s ease-in-out;
 }
 
-.wpp img{
-    max-width: 30px;
+.wpp-icon{
+    display: inline;
+    width: 30px;
+    height: 30px;
+    background-image: url(/IMG/Wpp\ Icon.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.2s ease;
 }
 
 
@@ -285,8 +292,11 @@ li{
     gap: 10px;
     border: 2px solid #F2F7FF;
     border-radius: 4px;
-    background-color: #249736;
-    
+    background-color: #249736;   
+}
+
+.wpp:hover .wpp-icon{
+    background-image: url(/IMG/Wpp\ Icon\ green.svg);
 }
 
 .wpp:hover{
@@ -451,8 +461,9 @@ li{
         font-size: 0.6rem;
     }
     
-    .wpp img{
-        max-width: 20px;
+    .wpp-icon{
+        width: 20px;
+        height: 20px;
     }
 
     .home p{
@@ -1021,8 +1032,6 @@ li{
 }
 
 
-
-
 /* EDUCATION */
 
 .bg-edu{
@@ -1210,3 +1219,84 @@ li{
     border: 1px solid #5793ED;
   }
   
+  @media (max-width: 1200px){
+    .edu-img, .edu-img img{
+        max-width: 300px;
+    }
+
+    .carousel-slides {
+        max-width: 900px;
+    }
+}
+    
+    @media (max-width: 1200px){
+        .deg-card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ads, .physical{
+            width: 250px;
+        }
+
+        .bg-edu{
+            padding-bottom: 250px;
+        }
+
+        .slide, .slide img {
+            min-width: 250px;
+          }
+    }
+
+    @media (max-width: 1024px){
+        .carousel-slides {
+            max-width: 700px;
+        }
+
+        .slide, .slide img {
+            min-width: 200px;
+          }
+
+          .title{
+            font-size: 0.9rem;
+          }
+
+          .edu-icon{
+            max-width: 20px;
+            margin-left: -28px;
+        }
+    }
+
+    @media (max-width: 790px){
+        .carousel-slides {
+            max-width: 500px;
+        }
+
+        .slide, .slide img {
+            min-width: 240px;
+        }
+
+        .edu-img{
+            display: none;
+        }
+
+        .edu-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header-edu{
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+    }
+
+
+
