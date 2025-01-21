@@ -28,7 +28,7 @@ a{
 
 .title{
     font-family: fira sans, Arial, Helvetica, sans-serif;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     color: #717171;
     font-weight: 400;
     margin-top: 0px;
@@ -36,7 +36,7 @@ a{
 
 .soon{
     font-family: fira sans, Arial, Helvetica, sans-serif;
-    font-size: 3em;
+    font-size: 3rem;
     color: #F2F7FF;
     font-weight: 600;
     text-transform: uppercase;
@@ -44,7 +44,7 @@ a{
 
 .ano{
     font-family: fira sans, Arial, Helvetica, sans-serif;
-    font-size: 2.25em;
+    font-size: 2.25rem;
     color: #F2F7FF;
     font-weight: 600;
     margin-top: -30px;
@@ -104,7 +104,7 @@ a{
 
 .card-inside span {
     font-family: fira sans, Arial, Helvetica, sans-serif;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     color: #5793ED;
     font-weight: 600;
 }
@@ -121,4 +121,294 @@ a{
 
 .project-card:hover{
     background-color: #1A1A1A;
+}
+
+@media (max-width: 1170px){
+    .project{
+        gap: 30px;
+    }
+
+    .project-card{
+        min-width: 300px;
+        min-height: 516px;
+    }
+
+    .card-inside img {
+        max-width: 60px;
+    }
+    
+    .card-inside span {
+        font-size: 1.3rem;
+    }
+    
+    .project-card:hover .card-inside{
+        transform: translatey(-20px);
+    }
+    
+    .project-card:hover .card-inside img{
+        transform: translatey(-20px);
+    }
+
+    .title{
+        font-size: 1.3rem;
+    }
+    
+    .soon{
+        font-size: 2.75rem;
+    }
+    
+    .ano{
+        font-size: 2.1rem;
+    }
+}
+
+@media (max-width: 1024px){
+    .project{
+        gap: 20px;
+    }
+
+    .project-card{
+        min-width: 250px;
+        min-height: 430px;
+    }
+
+    .title{
+        font-size: 1.3rem;
+    }
+    
+    .soon{
+        font-size: 2.5rem;
+    }
+    
+    .ano{
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 830px){
+    .bg-project{
+        min-height: 600px
+    }
+
+    .project{
+        gap: 10px;
+        padding-bottom: 0px;
+    }
+
+    .project-card{
+        min-width: 200px;
+        min-height: 340px;
+    }
+
+    .card-inside img {
+        max-width: 40px;
+    }
+    
+    .card-inside span {
+        font-size: 1rem;
+    }
+    
+    .project-card:hover .card-inside{
+        transform: translatey(-10px);
+    }
+    
+    .project-card:hover .card-inside img{
+        transform: translatey(-10px);
+    }
+    .title{
+        font-size: 1rem;
+    }
+    
+    .soon{
+        font-size: 2.2rem;
+    }
+    
+    .ano{
+        font-size: 1.5rem;
+    }
+}
+
+
+
+/* FOOTER */
+
+.bg-footer{
+    margin: 0 auto;
+    height: 250px;
+    background-color: #1A1A1A;
+    display: flex;
+    gap: 120px;
+    justify-content: center;
+    align-items: center;
+}
+
+.divisor-footer{
+    height: 150px;
+    width: 1px;
+    background: #5793ED;
+}
+
+.wid-footer{
+    width: 200px;
+    display: flex;
+    justify-content: end;
+}
+
+a .logo-footer{
+    max-width: 100px;
+}
+
+.redes-footer{
+    display: flex;
+    gap: 30px;
+}
+
+.redes-footer img{
+    max-width: 30px;
+    transition: 0.3s ease-in-out;
+}
+
+.redes-footer img:hover{
+    transform: translateY(-16px);
+    cursor: pointer;
+}
+
+.copy{
+    background-color: #1A1A1A;
+    text-align: center; 
+}
+
+.copy-text{
+    font-family: fira sans, Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: #717171;
+    margin: 0 auto;
+    padding-bottom: 15px;
+}
+
+.chat-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    
+}
+
+.chat-footer a{
+    background-color: #2E2E2E;
+    border: 1px solid #F2F7FF;
+    border-radius: 3px;
+    padding: 8px 16px;
+    font-size: 0.7rem;
+    font-family:  fira sans, Arial, Helvetica, sans-serif;
+    color: #F2F7FF;
+    text-align: center;
+    transition: 0.2s ease-in-out;
+}
+
+.wpp-icon-footer{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url(/IMG/Wpp\ Icon.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.wpp-footer:hover .wpp-icon-footer{
+    background-image: url(/IMG/Wpp_Icon_blue.svg);
+}
+
+.wpp-footer:hover{
+    border: 1px solid #5793ED;
+    background-color: #1A1A1A;
+    color: #5793ED;
+}
+
+.mail-icon-footer{
+    display: inline-block;
+    width: 15px;
+    height: 10px;
+    background-image: url(/IMG/mail_icon_wt.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.email-footer:hover .mail-icon-footer{
+    background-image: url(/IMG/mail\ icon.svg);
+}
+
+.email-footer:hover{
+    border: 1px solid #5793ED;
+    background-color: #1A1A1A;
+    color: #5793ED;
+}
+
+@media (max-width: 1080px){
+    .bg-footer{
+        gap: 80px;
+    }
+
+    .redes-footer{
+        gap: 20px;
+    }
+}
+
+@media (max-width: 870px){
+    .bg-footer{
+        gap: 60px;
+    }
+
+    .wid-footer{
+        width: 180px
+    }
+
+    a .logo-footer{
+        max-width: 80px;
+    }
+
+    .redes-footer{
+        display: flex;
+        gap: 20px;
+    }
+
+    .redes-footer img{
+        max-width: 25px;
+    }
+
+    .divisor-footer{
+        height: 120px;
+    }
+}
+
+@media (max-width: 768px){
+    .bg-footer{
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px 0px;
+    }
+
+    .divisor-footer{
+        display: inline-block;
+        height: 2px;
+        width: 180px;
+        /* border: 1px solid red; */
+    }
+
+    .wid-footer{
+        max-width: 200px;
+        justify-content: center;
+        padding-top: 10px;
+    }
+
+    .copy-text{
+        font-size: 0.8rem;
+        padding-top: 10px;
+    }
 }
