@@ -642,7 +642,7 @@ li{
 
 .paragrafo{
     font-family: fira sans, Arial, Helvetica, sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: #F2F7FF;
     text-align: end;
 
@@ -830,7 +830,7 @@ li{
     }
 
     .linha-id{
-        min-width: 250px;
+        min-width: 220px;
         margin: 20px;
     }
 
@@ -839,8 +839,12 @@ li{
         font-size: 0.6rem;
     }
 
+    .icon_item{
+        max-width: 50px;
+    }
+
     .icon_item img{
-        max-width: 80px;
+        max-width: 40px;
     }
 
     .texto-icon{
@@ -851,6 +855,11 @@ li{
         padding: 200px 0;
         gap: 10px;
     }
+
+    .texto-icon{
+        font-size: 0.8rem;
+        transform: translateY(5px);
+      }
 }  
 
 
@@ -995,12 +1004,12 @@ li{
     }
 
     .job-card h1{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .logo-empresa{
-        width: 50px;
-        height: 50px;
+        width: 45px;
+        height: 45px;
     }
 
     .arrow{
@@ -1010,7 +1019,8 @@ li{
 
 @media (max-width: 340px){
     .job-card{
-        max-width: 300px;
+        min-height: 180px;
+        max-width: 250px;
         align-items: center;
     }
     .job-card h2{
@@ -1020,6 +1030,11 @@ li{
 
     .job-card h1{
         font-size: 1.2rem;
+        margin-left: 10px;
+    }
+
+    .arrow{
+        margin-left: -50px;
     }
 
     .logo-empresa{
@@ -1030,7 +1045,12 @@ li{
     .job-card p {
         margin-top: -80px;
     }
+
+    .divisor{
+        display: none;
+    }
 }
+
 
 
 /* EDUCATION */
@@ -1296,6 +1316,62 @@ li{
             justify-content: center;
             align-items: center;
             gap: 30px;
+        }
+    }
+
+    @media (max-width: 670px){
+        .carousel-slides {
+            max-width: 300px;
+        }
+
+        .slide, .slide img {
+            min-width: 240px;
+        }
+    }
+
+    @media (max-width: 450px){
+        .bar, .level{
+            margin-left: 20px;
+        }
+    }
+
+    @media (max-width: 430px){
+        .slide, .slide img {
+            min-width: 200px;
+        }
+
+        .carousel-slides {
+            max-width: 250px;
+            padding-bottom: 50px;
+        }
+
+        .bg-edu{
+            padding-bottom: 300px;
+        }
+    }
+
+    @media (max-width: 385px){
+        .level{
+            margin-left: 10px;
+        }
+
+        .bar{
+            display: none;
+        }
+
+        .languages h1{
+            margin-top: 20px;
+            font-size: 1rem;
+            padding: 0 10px;
+        }
+
+        .languages{
+            max-width: 200px;
+            margin: 0 auto;
+        }
+
+        .ads, .physical{
+            max-width: 200px;
         }
     }
 
