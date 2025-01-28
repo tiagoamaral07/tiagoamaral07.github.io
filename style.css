@@ -247,9 +247,38 @@ li{
 
 }
 
-.home p span{
+.home p span.highlighted {
     color: #5793ED;
 }
+
+.home p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 1.5rem;
+    color: #F2F7FF; 
+    position: relative; 
+  }
+  
+  .home p span.highlighted {
+    color: #5793ED;
+  }
+  
+  #cursor {
+    position: absolute;
+    right: 0;
+    top: 0;
+    animation: blink 0.7s step-end infinite;
+    color: #5793ED; 
+    display: inline-block;
+    margin-right: -10px;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
 
 .chat{
     display: grid;
