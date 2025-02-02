@@ -126,6 +126,9 @@ a{
 @media (max-width: 1170px){
     .project{
         gap: 30px;
+        flex-wrap: wrap;
+
+
     }
 
     .project-card{
@@ -192,7 +195,7 @@ a{
 
     .project{
         gap: 10px;
-        padding-bottom: 0px;
+        padding-bottom: 80px;
     }
 
     .project-card{

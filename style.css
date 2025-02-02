@@ -180,7 +180,6 @@ li{
         position: fixed; /* Fixa o menu na tela */
         right: 0;
         top: 0;
-        
         height: 200px;
         background-color: #0E0E0E; /* Cor de fundo do menu */
         padding-top: 60px; /* Evita que o menu sobreponha o cabeçalho */
