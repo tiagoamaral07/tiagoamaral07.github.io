@@ -29,6 +29,27 @@ li{
     align-items: center;
 }
 
+.bg-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+
+.bg-menu.hidden {
+    transform: translateY(-100%);
+}
+
+.linha {
+    transition: transform 0.3s ease-in-out;  /* Transição suave para a linha */
+}
+
+.linha.hidden {
+    transform: translateY(-100%);  /* Faz a linha sumir junto com o cabeçalho */
+}
+
 .menu-hamburguer{
     display: none;
 }
@@ -150,6 +171,54 @@ li{
         transform: translateY(-10px) rotate(-45deg);
       }
 }
+
+/* Ajuste para o menu hamburguer */
+@media (max-width: 768px) {
+    /* O menu ficará invisível inicialmente e será posicionado corretamente */
+    .menu {
+        display: none; /* Menu invisível inicialmente */
+        position: fixed; /* Fixa o menu na tela */
+        right: 0;
+        top: 0;
+        
+        height: 200px;
+        background-color: #0E0E0E; /* Cor de fundo do menu */
+        padding-top: 60px; /* Evita que o menu sobreponha o cabeçalho */
+        z-index: 10; /* Garantir que o menu fique acima de outros elementos */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra do menu */
+    }
+
+    /* Quando a classe 'active' for adicionada ao menu, ele aparece */
+    .menu.active {
+        display: block;
+    }
+
+    /* Estilo para o fundo escuro */
+    .menu.active::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+        z-index: -1; /* Fundo atrás do menu */
+    }
+
+    /* Efeito do ícone do menu hamburguer */
+    .menu-hamburguer.active span:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .menu-hamburguer.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-hamburguer.active span:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+}
+
 
 @media (max-width: 480px){
     .menu-hamburguer{
