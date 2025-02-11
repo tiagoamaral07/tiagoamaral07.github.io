@@ -744,7 +744,7 @@ li{
     font-size: 1.3rem;
     color: #F2F7FF;
     text-align: end;
-
+    padding-top: 50px;
     display: inline-block;
     }
 
@@ -1165,6 +1165,10 @@ li{
     max-height: fit-content;
     max-width: 350px;
     grid-row: span 2;
+}
+
+.edu-img{
+    padding-left: 80px;
 }
 
 .edu-container{
