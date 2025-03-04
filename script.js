@@ -77,13 +77,13 @@ document.addEventListener("DOMContentLoaded", function() {
           if (currentScroll > lastScrollTop) {
               if (currentScroll > header.offsetHeight && isHeaderVisible) {
                   header.classList.add('hidden');
-                  linha.classList.add('hidden');  // Adiciona a classe hidden na linha
+                  linha.classList.add('hidden'); 
                   isHeaderVisible = false;
               }
           } else if (currentScroll < lastScrollTop) {
               if (!isHeaderVisible) {
                   header.classList.remove('hidden');
-                  linha.classList.remove('hidden');  // Remove a classe hidden na linha
+                  linha.classList.remove('hidden');
                   isHeaderVisible = true;
               }
           }
