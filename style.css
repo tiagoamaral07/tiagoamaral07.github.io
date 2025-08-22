@@ -1427,7 +1427,7 @@ li{
     justify-content: space-between;
     margin: 0 20px;
     min-width: 300px;
-    box-sizing: border-box
+    box-sizing: border-box;
   }
 
   .slide img {
@@ -1439,6 +1439,13 @@ li{
     border-radius: 4px;
     background: #717171;
     margin-bottom: 10px;
+    border: 1px solid #0E0E0E;
+    transition: all .3s;
+  }
+
+  .slide img:hover{
+    border: 1px solid #5793ED;
+    cursor: pointer;
   }
 
   .curso-nome{
