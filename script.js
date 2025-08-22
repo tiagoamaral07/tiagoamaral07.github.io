@@ -92,3 +92,41 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   });
   
+
+
+  const modals = {
+    arezzo: document.getElementById('arezzoco'),
+    south: document.getElementById('southbike'),
+    im: document.getElementById('mix')
+  };
+
+  const expBtn = document.querySelectorAll('.job-card');
+
+  expBtn.forEach((card) => {
+    card.addEventListener('click', () => {
+      Object.values(modals).forEach(modal => modal.style.display = 'none');
+
+    
+      const id = card.id;
+      const modalToShow = modals[id];
+      if (modalToShow) {
+        modalToShow.style.display = 'block';
+      }
+    });
+  });
+
+  document.querySelectorAll('.modal-content p').forEach(closeBtn => {
+    closeBtn.addEventListener('click', () => {
+      closeBtn.closest('.modal-exp').style.display = 'none';
+
+    });
+  });
+
+
+  document.querySelectorAll('.modal-exp').forEach(modal => {
+  modal.addEventListener('click', (e) => {
+    if (!e.target.closest('.modal-content')) {
+      modal.style.display = 'none';
+    }
+     });
+  });

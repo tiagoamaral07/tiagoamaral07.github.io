@@ -172,27 +172,24 @@ li{
       }
 }
 
-/* Ajuste para o menu hamburguer */
+
 @media (max-width: 768px) {
-    /* O menu ficará invisível inicialmente e será posicionado corretamente */
     .menu {
-        display: none; /* Menu invisível inicialmente */
-        position: fixed; /* Fixa o menu na tela */
+        display: none; 
+        position: fixed; 
         right: 0;
         top: 0;
         height: 200px;
-        background-color: #0E0E0E; /* Cor de fundo do menu */
-        padding-top: 60px; /* Evita que o menu sobreponha o cabeçalho */
-        z-index: 10; /* Garantir que o menu fique acima de outros elementos */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra do menu */
+        background-color: #0E0E0E; 
+        padding-top: 60px; 
+        z-index: 10; 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
     }
 
-    /* Quando a classe 'active' for adicionada ao menu, ele aparece */
     .menu.active {
         display: block;
     }
 
-    /* Estilo para o fundo escuro */
     .menu.active::before {
         content: '';
         position: absolute;
@@ -200,11 +197,10 @@ li{
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
-        z-index: -1; /* Fundo atrás do menu */
+        background-color: rgba(0, 0, 0, 0.5); 
+        z-index: -1;
     }
 
-    /* Efeito do ícone do menu hamburguer */
     .menu-hamburguer.active span:nth-child(1) {
         transform: translateY(10px) rotate(45deg);
     }
@@ -1066,6 +1062,98 @@ li{
     justify-items: center;
 }
 
+.modal-exp{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+}
+
+.modal-content{
+    display: grid;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    justify-self: center;
+    justify-items: center;
+    border-radius: 4px;
+    padding: 4px;
+    border: 1px solid #5793ED;
+    background-color: #1A1A1A;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+.modal-content p{
+    position: absolute;
+    right: 28px;
+    top: -4px;
+    font-size: 1.5rem;
+    color:#5793ED;
+    cursor: pointer;
+    padding: 2px 8px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: all 0.1s ease;
+    
+    }
+
+    .modal-content p:hover{
+        border: 1px solid #5793ED;
+    }
+
+.modal-content h1{
+    font-size: 1.2rem;
+    color: #B3B3B3;
+    padding: 8px 12px;
+    margin-bottom: 16px;
+}
+
+.modal-content ul{
+    grid-column: 1 / -1; 
+    padding: 12px;
+    margin: 0px 20px;
+    max-width: 400px;
+    display: grid;
+    gap: 16px;
+
+}
+
+.modal-content ul li{  
+    list-style: circle;
+    font-size: 1rem;
+    color: #F2F7FF;
+    margin-left: 8px;
+    transition: all .3s;
+}
+
+.modal-content ul li:hover{
+    transform: translateX(10px);
+}
+
+
+.modal-content ul li::marker{
+    color: #5793ED;
+    font-size: 1.5rem;
+}
+
+.back-list{
+    background-color: #2E2E2E;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 4px;
+    border-left: 4px solid #5793ED;
+    margin-bottom: 32px;   
+    padding: 12px 0; 
+}
+
+
+
 @media (max-width: 1024px){
     .job-card h1{
         font-size: 1.75rem;
@@ -1091,7 +1179,38 @@ li{
         justify-content: center;
         align-items: center;
     }
+
+    .modal-content{
+        max-width: 500px;
+    }
+
+    .back-list{
+       max-width:450px
+    }
+
 }
+
+@media (max-width: 542px){
+    .modal-content{
+        max-width: 350px;
+    }
+
+    .back-list{
+       max-width:300px
+    }
+
+    .modal-content h1{
+        font-size: 1rem;
+    }
+
+    .modal-content ul li{  
+    font-size: .8rem;
+    }
+
+
+
+}
+
 
 @media (max-width: 400px){
     .job-card{
@@ -1147,6 +1266,27 @@ li{
 
     .divisor{
         display: none;
+    }
+
+    .modal-content{
+        max-width: 300px;
+        margin: 0 18px;
+    }
+
+    .back-list{
+       max-width:270px;
+       margin-top: 1px;
+       margin-bottom: 10px;
+    }
+
+    .modal-content h1{
+        font-size: 1rem;
+        padding: 1px;
+    }
+
+    .modal-content p{  
+        top: -18px;
+        right: 8px
     }
 }
 
